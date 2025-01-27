@@ -1,10 +1,11 @@
 import React from 'react';
+import DomainSelection from './components/DomainSelection';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to My React App</h1>
+    <div>
+      <DomainSelection />
     </div>
   );
 }
