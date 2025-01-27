@@ -1,21 +1,21 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import "../styles/DomainSelection.css";  // Move styles to a separate CSS file
+import "../styles/PhotoUpload.css";  // If you want to use a separate CSS file
 
-const DomainSelection = () => {
-  const navigate = useNavigate();
-
+const PhotoUpload = () => {
   return (
     <div className="container">
-      <h1>Welcome to Sakhi Sampatti</h1>
-      <p>Please select your domain to log in:</p>
-      <div className="domain-selection">
-        <button onClick={() => navigate("/user-login")}>User Login</button>
-        <button onClick={() => navigate("/mentor-login")}>Mentor Login</button>
-        <button onClick={() => navigate("/admin-login")}>Admin Login</button>
-      </div>
+      <h1>Photo Upload</h1>
+      <form>
+        <label htmlFor="photo">Upload Photo</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required />
+
+        <label htmlFor="login-time">Login Time</label>
+        <input type="datetime-local" id="login-time" name="login-time" required />
+
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 };
 
-export default DomainSelection;
+export default PhotoUpload;
