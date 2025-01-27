@@ -1,11 +1,16 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DomainSelection from "./components/DomainSelection";
+import MentorLogin from "./components/MentorLogin";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to My React App</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<DomainSelection />} />
+        <Route path="/mentor-login" element={<MentorLogin />} />
+      </Routes>
+    </Router>
   );
 }
 
